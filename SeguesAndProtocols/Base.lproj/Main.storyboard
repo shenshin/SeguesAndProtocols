@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SeguesAndProtocols" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rht-4o-tsc">
+                                <rect key="frame" x="186" y="118" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdY-yB-yLd">
+                                <rect key="frame" x="168.66666666666666" y="265" width="77" height="30"/>
+                                <state key="normal" title="Отправить"/>
+                                <connections>
+                                    <action selector="sendButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z5k-fN-JUm"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hSS-Qc-Ln9">
+                                <rect key="frame" x="81" y="227" width="252" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="252" id="QEX-cr-C7p"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dg-AC-5NJ">
+                                <rect key="frame" x="122" y="686" width="170" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4Kx-Gq-PIo"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="AOe-xZ-fq0"/>
+                                </constraints>
+                                <state key="normal" title="Изменить цвет фона"/>
+                                <connections>
+                                    <action selector="changeColorButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JJV-eW-eWQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cdY-yB-yLd" firstAttribute="top" secondItem="hSS-Qc-Ln9" secondAttribute="bottom" constant="8" id="CWk-hk-7SA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3dg-AC-5NJ" secondAttribute="bottom" constant="20" id="PIr-D5-icD"/>
+                            <constraint firstItem="Rht-4o-tsc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T5Q-NM-89f"/>
+                            <constraint firstItem="hSS-Qc-Ln9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dwh-fW-hXu"/>
+                            <constraint firstItem="3dg-AC-5NJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fOf-Wx-aSW"/>
+                            <constraint firstItem="Rht-4o-tsc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="98" id="lzy-aI-P1W"/>
+                            <constraint firstItem="cdY-yB-yLd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xMh-P7-Hzh"/>
+                            <constraint firstItem="hSS-Qc-Ln9" firstAttribute="top" secondItem="Rht-4o-tsc" secondAttribute="bottom" constant="88" id="zWc-j5-ZLv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textInputField" destination="hSS-Qc-Ln9" id="sUr-vr-u7U"/>
+                        <outlet property="textLabel" destination="Rht-4o-tsc" id="gyv-g0-3de"/>
+                        <segue destination="dUZ-IK-0YR" kind="show" identifier="segue1" id="8UM-J9-gC7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="26.90217391304348"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="QD4-KY-d2o">
+            <objects>
+                <viewController id="dUZ-IK-0YR" customClass="SecondViewController" customModule="SeguesAndProtocols" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OYJ-pX-2EP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBy-wQ-hQS">
+                                <rect key="frame" x="186" y="120" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14X-BR-tO7">
+                                <rect key="frame" x="145.66666666666666" y="277" width="122.99999999999997" height="30"/>
+                                <state key="normal" title="Отправить назад"/>
+                                <connections>
+                                    <action selector="sendBackButtonPressed:" destination="dUZ-IK-0YR" eventType="touchUpInside" id="XMI-XE-3Wy"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yfx-Ay-LCE">
+                                <rect key="frame" x="84" y="230" width="246" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="246" id="bbb-Lc-ame"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9V-Da-6DO">
+                                <rect key="frame" x="133" y="686" width="148" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="148" id="2cE-fc-MEU"/>
+                                    <constraint firstAttribute="height" constant="30" id="F3X-PW-cF8"/>
+                                </constraints>
+                                <state key="normal" title="Изменить цвет фона"/>
+                                <connections>
+                                    <action selector="changeBackgroundColor:" destination="dUZ-IK-0YR" eventType="touchUpInside" id="jJr-Ur-IIf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="B9V-Da-6DO" firstAttribute="centerX" secondItem="OYJ-pX-2EP" secondAttribute="centerX" id="1O2-Qh-yrY"/>
+                            <constraint firstItem="Yfx-Ay-LCE" firstAttribute="top" secondItem="tBy-wQ-hQS" secondAttribute="bottom" constant="89" id="5ux-D2-enE"/>
+                            <constraint firstItem="14X-BR-tO7" firstAttribute="top" secondItem="Yfx-Ay-LCE" secondAttribute="bottom" constant="17" id="7LM-Lq-nJq"/>
+                            <constraint firstItem="tBy-wQ-hQS" firstAttribute="top" secondItem="k1h-XQ-bcg" secondAttribute="top" constant="100" id="8rM-Zb-0Sa"/>
+                            <constraint firstItem="tBy-wQ-hQS" firstAttribute="centerX" secondItem="OYJ-pX-2EP" secondAttribute="centerX" id="CjD-sN-fds"/>
+                            <constraint firstItem="14X-BR-tO7" firstAttribute="centerX" secondItem="OYJ-pX-2EP" secondAttribute="centerX" id="JNz-tL-eC2"/>
+                            <constraint firstItem="Yfx-Ay-LCE" firstAttribute="centerX" secondItem="OYJ-pX-2EP" secondAttribute="centerX" id="nNF-cX-eY0"/>
+                            <constraint firstItem="k1h-XQ-bcg" firstAttribute="bottom" secondItem="B9V-Da-6DO" secondAttribute="bottom" constant="20" id="qwa-hv-rqa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k1h-XQ-bcg"/>
+                    </view>
+                    <connections>
+                        <outlet property="textInputField" destination="Yfx-Ay-LCE" id="0a2-BT-W0O"/>
+                        <outlet property="textLabel" destination="tBy-wQ-hQS" id="4pY-4t-8ya"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mDP-Bo-AJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960.79999999999995" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+</document>
